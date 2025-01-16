@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Two Images Side by Side</title>
+    <style>
+        /* CSS to style the images */
+        .image-container {
+            display: flex;
+            justify-content: center; /* Center the images horizontally */
+            gap: 20px; /* Add spacing between images */
+        }
+        .image-container img {
+            width: 300px; /* Set the width of each image */
+            height: auto; /* Maintain aspect ratio */
+            border: 2px solid #ccc; /* Optional border styling */
+            border-radius: 8px; /* Rounded corners */
+        }
+    </style>
+</head>
+<body>
+    <h1>Two Images Side by Side</h1>
+    <div class="image-container">
+        <img src="joashcum.jpg" alt="Image 1">
+        <img src="joashshort.jpg" alt="Image 2">
+    </div>
+
+    <script>
+        // Optional JavaScript to dynamically load images
+        const images = document.querySelectorAll('.image-container img');
+        images.forEach((img, index) => {
+            img.addEventListener('click', () => {
+                alert(`You clicked Image ${index + 1}`);
+            });
+        });
+    </script>
+</body>
+</html>
